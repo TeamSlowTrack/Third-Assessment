@@ -32,13 +32,13 @@ export default
 
     ])
     .directive('compile', ['$compile', function ($compile) {
-      return function(scope, element, attrs) {
+      return function (scope, element, attrs) {
         scope.$watch(
-          function(scope) {
+          function (scope) {
             // watch the 'compile' expression for changes
             return scope.$eval(attrs.compile)
           },
-          function(value) {
+          function (value) {
             // when the 'compile' expression changes
             // assign it into the current DOM
             element.html(value)
